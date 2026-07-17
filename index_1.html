@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speak Drill — Routine quotidienne d'anglais oral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="wave" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="brand-text">
+      <h1>Speak Drill</h1>
+      <p>44 jours pour parler anglais sans bloquer</p>
+    </div>
+  </div>
+  <div class="streak" id="streak-box">
+    <span class="streak-num" id="streak-num">0</span>
+    <span class="streak-label">jours de suite</span>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <p>Six stations, un ordre précis. Chaque jour tu les traverses dans le sens 1 → 6 : l'échauffement ouvre la
+    bouche, l'articulation la muscle, le shadowing te donne l'oreille et le rythme, les sujets au hasard
+    t'entraînent à sortir des phrases sous pression, la lecture à voix haute stabilise ton intonation, et le
+    sujet personnel est le vrai test — parler de <em>toi</em>, sans filet.</p>
+  </section>
+
+  <section class="stations" id="stations">
+
+    <article class="station" data-step="1" data-timer="360">
+      <button class="station-head" aria-expanded="false">
+        <span class="num">1</span>
+        <span class="meta">
+          <span class="title">🇬🇧 Je parle en anglais</span>
+          <span class="sub">5 à 8 min · l'échauffement</span>
+        </span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="station-body">
+        <p>Parle à voix haute, seul, de n'importe quoi — ta journée, ce que tu vois par la fenêtre, ce que tu
+        vas manger. Le but n'est pas la précision, c'est de <strong>réveiller la bouche</strong> avant les
+        exercices sérieux. Ne t'arrête pas pour corriger une erreur, enchaîne.</p>
+        <div class="tool">
+          <div class="timer" data-default="360">
+            <span class="timer-display">06:00</span>
+            <div class="timer-controls">
+              <button class="btn-start">Démarrer</button>
+              <button class="btn-reset">Réinitialiser</button>
+            </div>
+          </div>
+        </div>
+        <button class="btn-done">Marquer comme fait aujourd'hui</button>
+      </div>
+    </article>
+
+    <article class="station" data-step="2" data-timer="900">
+      <button class="station-head" aria-expanded="false">
+        <span class="num">2</span>
+        <span class="meta">
+          <span class="title">✏️ Le stylo dans la bouche</span>
+          <span class="sub">15 min · l'articulation</span>
+        </span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="station-body">
+        <p>Coince un stylo horizontalement entre les dents (sans serrer les lèvres dessus) et lis à voix haute
+        un des textes ci-dessous. Ta bouche doit forcer pour articuler malgré l'obstacle — retire le stylo
+        après quelques minutes et tu sentiras tes muscles articulatoires beaucoup plus mobiles.</p>
+        <div class="tool">
+          <button class="btn-shuffle" data-target="reading-passage-2">Nouveau texte</button>
+          <p class="passage" id="reading-passage-2"></p>
+          <div class="timer" data-default="900">
+            <span class="timer-display">15:00</span>
+            <div class="timer-controls">
+              <button class="btn-start">Démarrer</button>
+              <button class="btn-reset">Réinitialiser</button>
+            </div>
+          </div>
+        </div>
+        <button class="btn-done">Marquer comme fait aujourd'hui</button>
+      </div>
+    </article>
+
+    <article class="station" data-step="3" data-timer="600">
+      <button class="station-head" aria-expanded="false">
+        <span class="num">3</span>
+        <span class="meta">
+          <span class="title">🎙️ Le shadowing <span class="badge">MA MÉTHODE</span></span>
+          <span class="sub">10 min · l'imitation</span>
+        </span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="station-body">
+        <p>Prends une vidéo avec sous-titres anglais (BBC 6 Minute English pour commencer, TED Talks quand ça
+        ira mieux). Technique du 10 par 10 : écoute 10 secondes, mets pause, répète à voix haute en imitant le
+        rythme et l'intonation — pas seulement les mots. Puis passe aux 10 secondes suivantes.</p>
+        <ul class="tips">
+          <li>Débutant → BBC Learning English, 6 Minute English</li>
+          <li>À l'aise → TED Talks, interviews non scriptées</li>
+          <li>Vise le rythme et la mélodie avant la perfection des mots</li>
+        </ul>
+        <div class="tool">
+          <div class="timer" data-default="600">
+            <span class="timer-display">10:00</span>
+            <div class="timer-controls">
+              <button class="btn-start">Démarrer</button>
+              <button class="btn-reset">Réinitialiser</button>
+            </div>
+          </div>
+        </div>
+        <button class="btn-done">Marquer comme fait aujourd'hui</button>
+      </div>
+    </article>
+
+    <article class="station" data-step="4" data-timer="60">
+      <button class="station-head" aria-expanded="false">
+        <span class="num">4</span>
+        <span class="meta">
+          <span class="title">🎯 Parler 1 min d'un sujet au hasard</span>
+          <span class="sub">10 à 30 min · l'exercice clé</span>
+        </span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="station-body">
+        <p>Tire un sujet, tu as 1 minute pour en parler sans préparation. Enregistre-toi si possible. Enchaîne
+        autant de tours que ton temps le permet (viser 10 à 20 tours sur 10-30 min). Le blocage vient
+        toujours des 5 premières secondes — force-toi à démarrer même mal.</p>
+        <div class="tool">
+          <button class="btn-shuffle" data-target="topic-4">Nouveau sujet</button>
+          <p class="passage topic" id="topic-4"></p>
+          <div class="timer" data-default="60">
+            <span class="timer-display">01:00</span>
+            <div class="timer-controls">
+              <button class="btn-start">Démarrer</button>
+              <button class="btn-reset">Réinitialiser</button>
+            </div>
+          </div>
+          <p class="round-counter">Tours enchaînés : <span id="round-count-4">0</span></p>
+        </div>
+        <button class="btn-done">Marquer comme fait aujourd'hui</button>
+      </div>
+    </article>
+
+    <article class="station" data-step="5" data-timer="600">
+      <button class="station-head" aria-expanded="false">
+        <span class="num">5</span>
+        <span class="meta">
+          <span class="title">📖 Lire à voix haute</span>
+          <span class="sub">5 à 15 min · l'intonation</span>
+        </span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="station-body">
+        <p>Lis le texte ci-dessous à voix haute, en exagérant l'intonation — monte le ton sur les questions,
+        marque les pauses aux virgules, appuie les mots importants. C'est la mélodie de la phrase qui rend un
+        anglais naturel, pas juste les mots justes.</p>
+        <div class="tool">
+          <button class="btn-shuffle" data-target="reading-passage-5">Nouveau texte</button>
+          <p class="passage serif" id="reading-passage-5"></p>
+          <div class="timer" data-default="600">
+            <span class="timer-display">10:00</span>
+            <div class="timer-controls">
+              <button class="btn-start">Démarrer</button>
+              <button class="btn-reset">Réinitialiser</button>
+            </div>
+          </div>
+        </div>
+        <button class="btn-done">Marquer comme fait aujourd'hui</button>
+      </div>
+    </article>
+
+    <article class="station" data-step="6" data-timer="150">
+      <button class="station-head" aria-expanded="false">
+        <span class="num">6</span>
+        <span class="meta">
+          <span class="title">🌍 Parler d'un sujet personnel</span>
+          <span class="sub">2 à 3 min · le vrai test</span>
+        </span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="station-body">
+        <p>Le test qui compte vraiment : parler de <em>ta</em> vie, sans script. Tire un sujet personnel et
+        parle 2 à 3 minutes d'affilée. C'est ici que tu vois si la journée a servi à quelque chose.</p>
+        <div class="tool">
+          <button class="btn-shuffle" data-target="topic-6">Nouveau sujet</button>
+          <p class="passage topic" id="topic-6"></p>
+          <div class="timer" data-default="150">
+            <span class="timer-display">02:30</span>
+            <div class="timer-controls">
+              <button class="btn-start">Démarrer</button>
+              <button class="btn-reset">Réinitialiser</button>
+            </div>
+          </div>
+        </div>
+        <button class="btn-done">Marquer comme fait aujourd'hui</button>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="footer-note">
+    <p>Ta progression et ta série sont enregistrées uniquement dans ton navigateur (localStorage) — rien n'est
+    envoyé nulle part. <button id="reset-day" class="link-btn">Réinitialiser la journée</button></p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
